@@ -27,3 +27,26 @@ This should be used as a dependency of **none-ls.nvim**.
   },
 }
 ```
+
+## FAQ
+
+How to trigger the formatter only if the project is using psalm?
+
+```lua
+null_ls.register(require("none-ls-psalm.diagnostics").with({
+  condition = function(utils)
+    return utils.root_has_file("psalm.xml")
+  end,
+}))
+```
+
+How to use project's psalm bin instead of globally installed one?
+
+```lua
+null_ls.register(require("none-ls-psalm.diagnostics").with({
+  command = "vendor/bin/psalm",
+  condition = function(utils)
+    return utils.root_has_file("vendor/bin/psalm")
+  end,
+}))
+```
