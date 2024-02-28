@@ -1,8 +1,8 @@
 # none-ls-psalm.nvim
 
-Psalm diagnostic plugin for [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim).
+Psalm diagnostic source for [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim).
 
-Since this diagnostic will be deprecated from [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)
+Since this diagnostic was deprecated from [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)
 (see [this issue](https://github.com/nvimtools/none-ls.nvim/issues/58)) because a LSP alternative is available,
 this repository allows to keep using [psalm](https://psalm.dev) linter with none-ls.nvim.
 
