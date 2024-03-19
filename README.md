@@ -18,15 +18,31 @@ This should be used as a dependency of **none-ls.nvim**.
 {
   {
     "nvimtools/none-ls.nvim",
-    config = function()
-        require("null-ls").register(require("none-ls-psalm.diagnostics"))
-    end,
     dependencies = {
-        "gbprod/none-ls-psalm.nvim",
+        "gbprod/none-ls-php.nvim",
     },
   },
 }
 ```
+
+## Setup
+
+Follow the steps in null-ls [setup](https://github.com/nvimtools/none-ls.nvim?tab=readme-ov-file#setup) section.
+
+```lua
+local null_ls = require("null-ls")
+
+null_ls.setup {
+  sources = {
+    require("none-ls-psalm.diagnostics"),
+    ...
+  }
+}
+```
+
+## Related projects
+
+You can search for sources via the [`none-ls-sources` topic](https://github.com/topics/none-ls-sources).
 
 ## FAQ
 
